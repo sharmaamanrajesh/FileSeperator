@@ -27,8 +27,20 @@ def fileFinder(folder_path,file_extensions):
 for extensiontypes, typeTuple in DictExtensions.items():
     folder_name = extensiontypes.split('_')[0] + 'Files'
     folder_path = os.path.join(folderPath,folder_name)
-    os.mkdir(folder_path)
-    for item in (fileFinder(folderPath,typeTuple)):
-        item_path = os.path.join(folderPath,item)
-        new_item_path = os.path.join(folder_path,item)
-        shutil.move(item_path,new_item_path)
+    if os.path.exists(folder_path):
+        pass
+    else:
+        os.mkdir(folder_path)
+    
+    myItems = fileFinder(folderPath,typeTuple)
+    
+    if myItems == []:
+        try:
+            os.rmdir(folder_path)
+        except:
+            pass
+    else:
+        for item in myItems:
+            item_path = os.path.join(folderPath,item)
+            new_item_path = os.path.join(folder_path,item)
+            shutil.move(item_path,new_item_path)
