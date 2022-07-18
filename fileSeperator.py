@@ -8,7 +8,7 @@ DictExtensions = {
     'document_Extensions' : ('.doc','.pages','.pdf','.txt'),
     'sourceCode_Extensions' : ('.cpp','.c','.py','.java','.html','.css'),
     'dmg_Extensions' : ('.dmg'),
-    'other_Extensions' : ('.rar','.zip','.download','.'),
+    'other_Extensions' : ('.rar','.zip','.download','.tar'),
 }
 
 
@@ -25,10 +25,10 @@ def fileFinder(folder_path,file_extensions):
     return files
 
 for extensiontypes, typeTuple in DictExtensions.items():
-    folder_name = 'My' + extensiontypes.split('_')[0] + 'Files'
+    folder_name = extensiontypes.split('_')[0] + 'Files'
     folder_path = os.path.join(folderPath,folder_name)
     os.mkdir(folder_path)
     for item in (fileFinder(folderPath,typeTuple)):
-        item_path = os.path.join(folder_path,item)
+        item_path = os.path.join(folderPath,item)
         new_item_path = os.path.join(folder_path,item)
         shutil.move(item_path,new_item_path)
