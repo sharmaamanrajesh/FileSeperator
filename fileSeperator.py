@@ -2,11 +2,11 @@ import os,shutil
 import types
 
 DictExtensions = {
-    'audio_Extensions' : ('.mp3','.m4a','.wav','.flac'),
-    'image_Extensions' : ('.jpeg','.jpg','.png','.svg','.gif','.ai'),
-    'video_Extensions' : ('.mp4','.mkv','.MKV','.flv','.mpeg'),
+    'audio_Extensions' : ('.mp3','.m4a','.wav','.flac','.aa','.3gp','.alac','.m4a','.m4p'),
+    'image_Extensions' : ('.jpeg','.jpg','.png','.svg','.gif','.ai','.apng','.avif','.jfif','.pjpeg','.pjp','.webp','.bmp','.ico','.cur','.tif','.tiff'),
+    'video_Extensions' : ('.mp4','.mkv','.MKV','.flv','.mpeg','.mov','.wmv','.avi'),
     'document_Extensions' : ('.doc','.pages','.pdf','.txt'),
-    'sourceCode_Extensions' : ('.cpp','.c','.py','.java','.html','.css'),
+    'sourceCode_Extensions' : ('.cpp','.c','.py','.java','.html','.css','.cgi','.pl','.class','.cs','.h','.php','.sh','.swift','.vb'),
     'dmg_Extensions' : ('.dmg'),
     'other_Extensions' : ('.rar','.zip','.download','.tar'),
 }
